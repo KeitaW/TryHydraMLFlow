@@ -93,3 +93,6 @@ mlruns/
 
 # Data for reporting
 reports/data
+
+# Hydra log files
+outputs/
