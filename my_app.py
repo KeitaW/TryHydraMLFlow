@@ -6,7 +6,7 @@ import hydra
 def show_config(cfg):
     print(cfg.pretty())
 
-@hydra.main()
+@hydra.main(config_path='conf/config.yaml')
 def check_path(cfg: DictConfig) -> None:
     print(f'Current working directory: {os.getcwd()}')
     print(f'Orig working directory : {hydra.utils.get_original_cwd()}')
@@ -15,4 +15,4 @@ def check_path(cfg: DictConfig) -> None:
 
 if __name__ == "__main__":
     show_config()
-    check_path(config_path='conf/config.yaml')
+    check_path()
